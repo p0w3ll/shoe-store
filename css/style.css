@@ -1,0 +1,418 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+}
+
+/* Navbar  */
+nav {
+    width: 100%;
+    height:80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+.logo h3 {
+    font-size: 25px;
+}
+
+.pages {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+}
+
+.list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+.list li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width .7s;
+}
+
+.list li:hover::before {
+    width: 100%;
+}
+
+.list li a {
+    text-decoration: none;
+    color: black;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart span {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    padding: 3px 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 7px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px black;
+}
+
+.burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+    gap: 10px;
+    padding: 1rem;
+    width: 100%;
+    height: 100vh;
+}
+
+.promo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.men_promo, .women_promo {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.promo_img, .ads, .ad_img {
+    width: 100%;
+    height: 100%;
+}
+
+.promo_img img, .ad_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.men_promo .promo_details, .women_promo .promo_details, .product_item .promo_details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.297);
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.slider a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.slider a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.our_mission {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 4rem;
+}
+
+.mission {
+    width: 50%;
+}
+
+.mission h3 {
+    font-size: 30px;
+}
+
+.mission_img {
+    width: 50%;
+    height: 400px;
+}
+
+.mission_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.products {
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    gap: 20px;
+}
+
+.product_item {
+    width: 100%;
+    height: 320px;
+    position: relative;
+}
+
+.product_item .promo_details {
+    height: fit-content;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    align-items: start;
+    border-radius: 10px;
+}
+
+.product_item .promo_price {
+    display: grid;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.product_item .promo_price button {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.about_us {
+    display: flex;
+    gap: 20px;
+    padding: 4rem;
+}
+
+.team {
+    width: 50%;
+    height: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.team_img {
+    width: 100%;
+    height: 100%;
+}
+
+.team_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team_details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.434);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.team_title {
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(201, 201, 201);
+}
+
+.team_title span {
+    margin-top: 5px;
+    font-size: 14px;
+    color: gray;
+}
+
+.team_info {
+    height: 0;
+    overflow: hidden;
+    transition: height .7s;
+}
+
+.team_info p {
+    padding: 5px 0;
+}
+
+.team_details:hover .team_info {
+    height: fit-content;
+}
+
+.contact_us {
+    width: 100%;
+    padding: 4rem;
+    background-image: url(../access/623a2a8be85b08961d84f20656843614.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frm_inp {
+    display: grid;
+    gap: 10px;
+    width: 500px;
+}
+
+.inp_ctrl, .inp_ctrl input, .inp_ctrl, .foot_ctrl input {
+    width: 100%;
+}
+
+.inp_ctrl input, .inp_ctrl textarea, .foot_ctrl input {
+    height: 40px;
+    outline: none;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.inp_ctrl textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.frm_btn {
+    width: 150px;
+    margin: 20px auto;
+}
+
+.frm_btn button, .foot_btn button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 0 grey;
+    transition: all .7s;
+}
+
+.frm_btn:hover {
+    transform: scale(1.2);
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 4rem;
+}
+
+.foot_main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+}
+
+.foot_pages .list {
+    display: grid;
+    gap: 10px;
+    height: fit-content;
+}
+
+.foot_pages .list li a {
+    color: white;
+}
+
+.foot_form {
+    display: grid;
+    gap: 10px;
+}
+
+.foot_form .frm_inp {
+    width: 300px;
+}
+
+.foot_btn button {
+    background-color: grey;
+    box-shadow: 2px 2px 0 white;
+    margin-top: 10px;
+}
+
+.foot_bottom {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+/* for mobile responsiveness */
+@media (max-width: 575px) {
+    .pages .list {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 70vw;
+       height: 100vh;
+       background-color: black;
+       z-index: 10;
+       display: column;
+    }
+    .pages .list li {
+        height: fit-content;
+    }
+    
+    .pages .list li a {
+        color: white;
+        height: fit-content;
+    } 
+}
+
